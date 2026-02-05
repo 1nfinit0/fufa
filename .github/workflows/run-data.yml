@@ -28,7 +28,8 @@ jobs:
       # 4️⃣ Crear .env.local desde secrets
       - name: Create env file
         run: |
-          echo "URL=${{ secrets.DATA_URL }}" > src/data/.env.local
+          echo "SPREADSHEET_LINK=${{ secrets.SPREADSHEET_LINK }}" > src/data/.env.local
+
 
       # 5️⃣ Ejecutar script
       - name: Run script
