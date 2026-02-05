@@ -8,9 +8,18 @@ import os
 import pyktok as pyk # type: ignore
 from TikTokApi import TikTokApi # type: ignore
 
-load_dotenv(".env.local")
+
+env_path = Path(__file__).parent / ".env.local"
+pathBase = Path(os.getcwd())
+load_dotenv(env_path)
+
 CSV_URL = os.getenv("SPREADSHEET_LINK")
 OUTPUT_PATH = Path("rawData.json")
+
+print("Path Base:", pathBase)
+print("ENV PATH:", env_path)
+print("CSV_URL:", CSV_URL)
+
 
 def main():
     
@@ -46,7 +55,7 @@ def main():
         json_loaded = json.loads(json_str)
                 
         # Old data
-        with open("rawData.json", "r", encoding="utf-8") as f:
+        with open(Path(__file__).parent / "rawData.json", "r", encoding="utf-8") as f:
             old_data_json = json.load(f)
             
         print("Las fuentes son iguales:",old_data_json == json_loaded)
@@ -128,14 +137,10 @@ def main():
     # Productos Modificados: 0
     
     def makeDirForNewProduct(item):
-        baseDir = Path(f"media/{item['id']}")
-        imgDir = baseDir / "images"
-        videoDir = baseDir / "videos"
+        imgDir = pathBase / "public" / "media" / item['id'] / "images"
+        videoDir = pathBase / "public" / "media" / item['id'] / "videos"
         imgDir.mkdir(parents=True, exist_ok=True)
         videoDir.mkdir(parents=True, exist_ok=True)
-        
-        
-    pathBase = Path.cwd()
     
     print(f"Productos Nuevos: {cantidadPN}")
     
@@ -154,7 +159,7 @@ def main():
             
             tiktok_url_list = [url for url in tiktok_url_list if url] # Filtrar URLs vacías
             
-            os.chdir(pathBase / f"media/{producto['id']}/videos")
+            os.chdir(pathBase / f"public/media/{producto['id']}/videos")
             
             print(f"Descargando videos para {producto['id']}")
             
