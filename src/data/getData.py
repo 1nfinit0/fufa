@@ -6,7 +6,6 @@ import json
 from dotenv import load_dotenv # type: ignore
 import os
 import pyktok as pyk # type: ignore
-from TikTokApi import TikTokApi # type: ignore
 import time
 
 
@@ -51,7 +50,6 @@ def main():
             StringIO(csv_content),
         )
 
-        # OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
         json_str = df.to_json(orient="records", indent=2, force_ascii=False)
         json_loaded = json.loads(json_str)
                 
@@ -111,7 +109,6 @@ def main():
         Retorna:
         - lista de diccionarios con los productos modificados (versión nueva)
         """
-        # Crear un diccionario de productos antiguos indexados por Código
         old_dict = {item["id"]: item for item in old_json}
         
         modificados = []
@@ -119,7 +116,6 @@ def main():
         for item in new_json:
             codigo = item["id"]
             if codigo in old_dict:
-                # Comparar el producto nuevo con el antiguo
                 if item != old_dict[codigo]:
                     modificados.append(item)
         
@@ -158,29 +154,28 @@ def main():
                 tiktok_url_list.append(producto['video3'])
                 tiktok_url_list.append(producto['video4'])
                 
-                tiktok_url_list = [url for url in tiktok_url_list if url] # Filtrar URLs vacías
+                tiktok_url_list = [url for url in tiktok_url_list if url]
                 
                 os.chdir(pathBase / f"public/media/{producto['id']}/videos")
                 
                 print(f"Descargando videos para {producto['id']}")
                 
-                pyk.save_tiktok_multi_urls(
-                    tiktok_url_list,
-                    True,
-                    'data.csv',
-                    2
-                )
+                # pyk.save_tiktok_multi_urls(
+                #     tiktok_url_list,
+                #     True,
+                #     'data.csv',
+                #     2
+                # )
                 
-                time.sleep(60)  # Pausa de 60 segundos entre descargas
+                # time.sleep(60)  # Zzz
                 
                 print(f"Videos descargados para {producto['id']}")
                 os.chdir(pathBase)
         
             except Exception as e:
                 print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
-                # Asegurarse de volver al directorio base en caso de error
                 os.chdir(pathBase) if 'pathBase' in locals() else None
-                continue  # Pasar al siguiente producto
+                continue 
             
 if __name__ == "__main__":
     main()
