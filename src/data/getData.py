@@ -7,6 +7,7 @@ from dotenv import load_dotenv # type: ignore
 import os
 import pyktok as pyk # type: ignore
 from TikTokApi import TikTokApi # type: ignore
+import time
 
 
 env_path = Path(__file__).parent / ".env.local"
@@ -169,6 +170,8 @@ def main():
                 'data.csv',
                 2
             )
+            
+            time.sleep(60)  # Pausa de 60 segundos entre descargas
             
             # a = 'test de almacenamiento'
             # # Guarda el contenido de la variable 'a' en un archivo de texto
