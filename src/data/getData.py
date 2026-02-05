@@ -163,17 +163,17 @@ def main():
             
             print(f"Descargando videos para {producto['id']}")
             
-            # pyk.save_tiktok_multi_urls(
-            #     tiktok_url_list,
-            #     True,
-            #     'data.csv',
-            #     2
-            # )
+            pyk.save_tiktok_multi_urls(
+                tiktok_url_list,
+                True,
+                'data.csv',
+                2
+            )
             
-            a = 'test de almacenamiento'
-            # Guarda el contenido de la variable 'a' en un archivo de texto
-            with open('test.txt', 'w', encoding='utf-8') as file:
-                file.write(a)            
+            # a = 'test de almacenamiento'
+            # # Guarda el contenido de la variable 'a' en un archivo de texto
+            # with open('test.txt', 'w', encoding='utf-8') as file:
+            #     file.write(a)            
             
             print(f"Videos descargados para {producto['id']}")
             os.chdir(pathBase)
