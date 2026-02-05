@@ -148,38 +148,39 @@ def main():
     
     if cantidadPN > 0:
         for producto in productosNuevos(json_loaded, old_data_json):
-            
-            makeDirForNewProduct(producto)
-            
-            tiktok_url_list = []
-            
-            tiktok_url_list.append(producto['video1'])
-            tiktok_url_list.append(producto['video2'])
-            tiktok_url_list.append(producto['video3'])
-            tiktok_url_list.append(producto['video4'])
-            
-            tiktok_url_list = [url for url in tiktok_url_list if url] # Filtrar URLs vacías
-            
-            os.chdir(pathBase / f"public/media/{producto['id']}/videos")
-            
-            print(f"Descargando videos para {producto['id']}")
-            
-            pyk.save_tiktok_multi_urls(
-                tiktok_url_list,
-                True,
-                'data.csv',
-                2
-            )
-            
-            time.sleep(60)  # Pausa de 60 segundos entre descargas
-            
-            # a = 'test de almacenamiento'
-            # # Guarda el contenido de la variable 'a' en un archivo de texto
-            # with open('test.txt', 'w', encoding='utf-8') as file:
-            #     file.write(a)            
-            
-            print(f"Videos descargados para {producto['id']}")
-            os.chdir(pathBase)
+            try:
+                makeDirForNewProduct(producto)
+                
+                tiktok_url_list = []
+                
+                tiktok_url_list.append(producto['video1'])
+                tiktok_url_list.append(producto['video2'])
+                tiktok_url_list.append(producto['video3'])
+                tiktok_url_list.append(producto['video4'])
+                
+                tiktok_url_list = [url for url in tiktok_url_list if url] # Filtrar URLs vacías
+                
+                os.chdir(pathBase / f"public/media/{producto['id']}/videos")
+                
+                print(f"Descargando videos para {producto['id']}")
+                
+                pyk.save_tiktok_multi_urls(
+                    tiktok_url_list,
+                    True,
+                    'data.csv',
+                    2
+                )
+                
+                time.sleep(60)  # Pausa de 60 segundos entre descargas
+                
+                print(f"Videos descargados para {producto['id']}")
+                os.chdir(pathBase)
         
+            except Exception as e:
+                print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
+                # Asegurarse de volver al directorio base en caso de error
+                os.chdir(pathBase) if 'pathBase' in locals() else None
+                continue  # Pasar al siguiente producto
+            
 if __name__ == "__main__":
     main()
