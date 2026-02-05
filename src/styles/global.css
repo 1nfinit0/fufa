@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "CraftyGirls";
+  src: url("/fonts/CraftyGirls-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-crafty: "CraftyGirls", sans-serif;
+}
+
