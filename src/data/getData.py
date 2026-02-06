@@ -16,11 +16,6 @@ load_dotenv(env_path)
 CSV_URL = os.getenv("SPREADSHEET_LINK")
 OUTPUT_PATH = Path("rawData.json")
 
-print("Path Base:", pathBase)
-print("ENV PATH:", env_path)
-print("CSV_URL:", CSV_URL)
-
-
 def main():
     
     __doc__ = """
@@ -139,31 +134,54 @@ def main():
         imgDir.mkdir(parents=True, exist_ok=True)
         videoDir.mkdir(parents=True, exist_ok=True)
     
-    def downloadVideosForNewProduct(item):
-        tiktok_url_list = []
-                
-        tiktok_url_list.append(item['video1'])
-        tiktok_url_list.append(item['video2'])
-        tiktok_url_list.append(item['video3'])
-        tiktok_url_list.append(item['video4'])
-        
-        tiktok_url_list = [url for url in tiktok_url_list if url]
-        
-        os.chdir(pathBase / f"public/media/{item['id']}/videos")
-        
-        print(f"Descargando videos para {item['id']}")
-        
-        pyk.save_tiktok_multi_urls(
-            tiktok_url_list,
-            True,
-            'data.csv',
-            2
-        )
+    def downloadVideosForProduct(item):
+        try:
+            tiktok_url_list = []
 
-        time.sleep(60)  # Zzz
+            tiktok_url_list.append(item['video1'])
+            tiktok_url_list.append(item['video2'])
+            tiktok_url_list.append(item['video3'])
+            tiktok_url_list.append(item['video4'])
+
+            tiktok_url_list = [url for url in tiktok_url_list if url]
+
+            for entry in os.listdir("."): 
+                if entry.endswith(".mp4"): 
+                    os.remove(entry)
+
+            print(f"Descargando videos para {item['id']}")
+
+            pyk.save_tiktok_multi_urls(
+                tiktok_url_list,
+                True,
+                'data.csv',
+                2
+            )
+
+            time.sleep(60)  # Zzz    
+
+            print(f"Videos descargados para {item['id']}")
+            
+        except Exception as e:
+            print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
         
-        print(f"Videos descargados para {item['id']}")
-        os.chdir(pathBase)
+    def downloadImagesForProduct(item):
+        
+        for entry in os.listdir("."): 
+                if entry: 
+                    os.remove(entry)
+        
+        image_url_list = []
+        image_url_list.append(item['image1'])
+        image_url_list.append(item['image2'])
+        image_url_list.append(item['image3'])
+        image_url_list.append(item['image4'])
+        
+        for i, url in enumerate(image_url_list, start=1):
+            response = requests.get(url)
+            filename = os.path.basename(url)
+            with open(f"{filename}{i}", "wb") as f:
+                f.write(response.content)
         
     
     print(f"Productos Nuevos: {cantidadPN}")
@@ -174,8 +192,12 @@ def main():
             try:
                 
                 makeDirForNewProduct(producto)
-                
-                # downloadVideosForNewProduct(producto)
+                # os.chdir(pathBase / f"public/media/{producto['id']}/videos")
+                # downloadVideosForProduct(producto)
+                # os.chdir(pathBase)
+                os.chdir(pathBase / f"public/media/{producto['id']}/images")
+                downloadImagesForProduct(producto)
+                os.chdir(pathBase)
                 
                 
         
