@@ -7,6 +7,8 @@ from dotenv import load_dotenv # type: ignore
 import os
 import pyktok as pyk # type: ignore
 import time
+import mimetypes
+from urllib.parse import urlparse
 
 
 env_path = Path(__file__).parent / ".env.local"
@@ -177,14 +179,49 @@ def main():
         image_url_list.append(item['image3'])
         image_url_list.append(item['image4'])
         
+        image_url_list = [url for url in image_url_list if url]
+        
+        print(f"Descargando imágenes para {item['id']}")
+        
+        VALID_IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".tiff"}
+
         for i, url in enumerate(image_url_list, start=1):
             response = requests.get(url)
-            filename = os.path.basename(url)
-            with open(f"{filename}{i}", "wb") as f:
+            response.raise_for_status()
+
+            parsed = urlparse(url)
+            filename = os.path.basename(parsed.path)
+            name, ext = os.path.splitext(filename)
+
+            ext = ext.lower()
+
+            mime_type = response.headers.get("Content-Type", "").split(";")[0]
+            guessed_ext = mimetypes.guess_extension(mime_type)
+
+            if ext not in VALID_IMAGE_EXTS:
+                ext = guessed_ext or ".bin"
+
+            final_name = f"{i}{ext}"
+
+            with open(final_name, "wb") as f:
                 f.write(response.content)
+
+        print(f"\tImágenes descargadas para {item['id']}\n")
         
+    def removeDownloadedMedia(item):
+        media_path = pathBase / "public" / "media" / item['id']
+        if media_path.exists() and media_path.is_dir():
+            for child in media_path.rglob('*'):
+                if child.is_file():
+                    child.unlink()
+            for child in reversed(list(media_path.rglob('*'))):
+                if child.is_dir():
+                    child.rmdir()
+            media_path.rmdir()
+        print(f"Eliminado: {item['id']}")
     
-    print(f"Productos Nuevos: {cantidadPN}")
+    
+    print(f"Productos Nuevos: {cantidadPN}\n")
     
     
     if cantidadPN > 0:
@@ -192,19 +229,48 @@ def main():
             try:
                 
                 makeDirForNewProduct(producto)
-                # os.chdir(pathBase / f"public/media/{producto['id']}/videos")
-                # downloadVideosForProduct(producto)
-                # os.chdir(pathBase)
+                os.chdir(pathBase / f"public/media/{producto['id']}/videos")
+                downloadVideosForProduct(producto)
+                os.chdir(pathBase)
                 os.chdir(pathBase / f"public/media/{producto['id']}/images")
                 downloadImagesForProduct(producto)
                 os.chdir(pathBase)
-                
-                
         
             except Exception as e:
                 print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
                 os.chdir(pathBase) if 'pathBase' in locals() else None
                 continue 
+    
+    print(f"Productos Eliminados: {cantidadPE}\n")
             
+    if cantidadPE > 0:
+        for producto in productosEliminados(json_loaded, old_data_json):
+            try:
+                removeDownloadedMedia(producto)
+            except Exception as e:
+                print(f"Error eliminando medios para producto {producto.get('id', 'ID desconocido')}: {e}")
+                continue
+            
+    print(f"Productos Modificados: {cantidadPM}\n")
+    
+    if cantidadPM > 0:
+        for producto in productosModificados(json_loaded, old_data_json):
+            try:
+                removeDownloadedMedia(producto)
+                makeDirForNewProduct(producto)
+                os.chdir(pathBase / f"public/media/{producto['id']}/videos")
+                downloadVideosForProduct(producto)
+                os.chdir(pathBase)
+                os.chdir(pathBase / f"public/media/{producto['id']}/images")
+                downloadImagesForProduct(producto)
+                os.chdir(pathBase)
+        
+            except Exception as e:
+                print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
+                os.chdir(pathBase) if 'pathBase' in locals() else None
+                continue
+    
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(json_loaded, f, ensure_ascii=False, indent=2)
 if __name__ == "__main__":
     main()
