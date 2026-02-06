@@ -139,38 +139,45 @@ def main():
         imgDir.mkdir(parents=True, exist_ok=True)
         videoDir.mkdir(parents=True, exist_ok=True)
     
+    def downloadVideosForNewProduct(item):
+        tiktok_url_list = []
+                
+        tiktok_url_list.append(item['video1'])
+        tiktok_url_list.append(item['video2'])
+        tiktok_url_list.append(item['video3'])
+        tiktok_url_list.append(item['video4'])
+        
+        tiktok_url_list = [url for url in tiktok_url_list if url]
+        
+        os.chdir(pathBase / f"public/media/{item['id']}/videos")
+        
+        print(f"Descargando videos para {item['id']}")
+        
+        pyk.save_tiktok_multi_urls(
+            tiktok_url_list,
+            True,
+            'data.csv',
+            2
+        )
+
+        time.sleep(60)  # Zzz
+        
+        print(f"Videos descargados para {item['id']}")
+        os.chdir(pathBase)
+        
+    
     print(f"Productos Nuevos: {cantidadPN}")
     
     
     if cantidadPN > 0:
         for producto in productosNuevos(json_loaded, old_data_json):
             try:
+                
                 makeDirForNewProduct(producto)
                 
-                tiktok_url_list = []
+                # downloadVideosForNewProduct(producto)
                 
-                tiktok_url_list.append(producto['video1'])
-                tiktok_url_list.append(producto['video2'])
-                tiktok_url_list.append(producto['video3'])
-                tiktok_url_list.append(producto['video4'])
                 
-                tiktok_url_list = [url for url in tiktok_url_list if url]
-                
-                os.chdir(pathBase / f"public/media/{producto['id']}/videos")
-                
-                print(f"Descargando videos para {producto['id']}")
-                
-                # pyk.save_tiktok_multi_urls(
-                #     tiktok_url_list,
-                #     True,
-                #     'data.csv',
-                #     2
-                # )
-                
-                # time.sleep(60)  # Zzz
-                
-                print(f"Videos descargados para {producto['id']}")
-                os.chdir(pathBase)
         
             except Exception as e:
                 print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
