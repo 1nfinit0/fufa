@@ -165,7 +165,7 @@ def main():
             print(f"Videos descargados para {item['id']}")
             
         except Exception as e:
-            print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
+            print(f"Error procesando producto {item.get('id', 'ID desconocido')}: {e}")
         
     def downloadImagesForProduct(item):
         
@@ -270,7 +270,11 @@ def main():
                 os.chdir(pathBase) if 'pathBase' in locals() else None
                 continue
     
+    os.chdir(pathBase / "src/data")
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(json_loaded, f, ensure_ascii=False, indent=2)
+    os.chdir(pathBase)
+    print(f"Actualizado: {OUTPUT_PATH}")
+    
 if __name__ == "__main__":
     main()
