@@ -13,5 +13,8 @@
     "astro": "^5.16.15",
     "csv-parse": "^6.1.0",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.1"
   }
 }

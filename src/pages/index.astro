@@ -1,12 +1,16 @@
 ---
 
-import Welcome from '@components/Welcome.astro';
+import Hero from '@components/Hero.astro';
 import Layout from '@layouts/Layout.astro';
-import Embed from '@components/Embed.astro';
+import Titular from '@components/Titular.astro';
+import CatalogCategory from '@components/CatalogCategory.astro';
 
 ---
 
 <Layout>
-	<Welcome />
-	<Embed url="https://www.tiktok.com/@scout2015/video/7599050114816101650"/>
+	<Hero/>
+	<div class="self-baseline mx-5 lg:mx-20 z-100 my-4">
+		<Titular />
+	</div>
+	<CatalogCategory/>
 </Layout>

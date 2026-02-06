@@ -18,17 +18,19 @@ const currentYear = new Date().getFullYear();
 				<div class="flex items-center ">
 					<a href="/cart" class="text-white text-lg">{back}</a>
 				</div>
-				<a href="/" class="font-crafty text-white text-5xl">Fufa</a>
+				<a href="/" class="font-crafty text-white text-3xl">Fufa</a>
 				<div class="flex items-center relative">
 					<a href="/cart" class="text-white text-3xl">🛒</a>
 					<span class="rounded-full bg-red-500 text-white px-2 absolute -bottom-1 -right-2">0</span>
 				</div>
 		</header>
 		<main class="min-h-dvh bg-[radial-gradient(ellipse_at_bottom_right,#9d174d,#d946ef,#f0abfc)] flex flex-col items-center">
-			<slot />
+			<div class="w-full max-w-7xl flex flex-col items-center">
+				<slot />
+			</div>
 		</main>
-		<footer class="w-full bg-gray-100">
-			<p class="text-center p-4 text-gray-500">© {currentYear} Fufa. All rights reserved.</p>
+		<footer class="w-full bg-purple-600">
+			<p class="text-center p-4 text-white">© {currentYear} Fufa. All rights reserved.</p>
 		</footer>
 	</body>
 </html>

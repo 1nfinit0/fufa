@@ -1,0 +1,47 @@
+---
+
+---
+
+<div class="relative flex items-center justify-center">
+  <span class="umbrella absolute -top-4 -left-4 text-6xl md:text-7xl lg:text-8xl z-0 -rotate-25"> ☂️ </span>
+  <span
+    class="absolute mx-auto py-4 flex border w-fit bg-linear-to-r blur-xl from-yellow-600 via-teal-400 to-red-500 bg-clip-text text-3xl md:text-4xl lg:text-5xl box-content font-extrabold text-transparent text-center select-none z-10 italic"
+  >
+    Nueva Colección Verano 2026
+  </span>
+  <h1
+    class="relative top-0 w-fit h-auto py-4 justify-center flex bg-linear-to-r items-center from-yellow-300 via-sky-300 to-blue-200 bg-clip-text text-2xl md:text-3xl lg:text-4xl font-extrabold text-transparent text-center select-auto z-10 italic"
+  >
+    Nueva Colección Verano 2026
+  </h1>
+  <span class="sun absolute bottom-4 -right-7 text-6xl md:text-7xl lg:text-8xl z-0"> ☀️ </span>
+</div>
+
+<style>
+.sun {
+  animation: sunMoveWithSpin 10s ease-in-out infinite alternate;
+}
+
+@keyframes sunMoveWithSpin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+  .umbrella {
+    animation: umbrellaMove 5s ease-in-out infinite alternate;
+  }
+  @keyframes umbrellaMove {
+    0% {
+      transform: translateY(0) rotate(-25deg);
+    }
+    100% {
+      transform: translateY(30px) rotate(-25deg);
+    }
+  }
+</style>

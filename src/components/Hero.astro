@@ -24,7 +24,6 @@ const bannersList = getBanners();
       ))}
     </div>
 
-    {/* Indicadores */}
     <div class="dots">
       {bannersList.map((_, index) => (
         <button 
@@ -35,11 +34,10 @@ const bannersList = getBanners();
     </div>
   </div>
 
-<style>
+<style> 
   .banner-carousel {
     position: relative;
     width: 100%;
-    max-width: 1450px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
@@ -86,8 +84,8 @@ const bannersList = getBanners();
   }
 
   .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: rgb(223, 223, 223);
     border: none;
