@@ -26,7 +26,7 @@ const { producto } = Astro.props;
 const images = getAllImages(producto.id);
 const videos = getAllVideos(producto.id);
 ---
-<Layout back="Volver" title={`Fufa | ${producto.producto}`} description={String(producto.precio)} image={getFirstImage(producto.id)} url={Astro.url.href} type="product" siteName="Fufa Store" locale="es_ES" twitterCard="summary_large_image" twitterCreator="@1nfinit0" twitterSite="@1nfinit0"> 
+<Layout back="Volver" title={`${producto.producto}`} description={`A solo S/. ${String(producto.precio)}`} image={getFirstImage(producto.id)} url={Astro.url.href} type="product" siteName="Fufa Store" locale="es_ES" twitterCard="summary_large_image" twitterCreator="@1nfinit0" twitterSite="@1nfinit0"> 
 
   <Carousel images={images}/>
   <ProductInfo item={producto} />
