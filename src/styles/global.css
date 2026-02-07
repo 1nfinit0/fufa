@@ -6,6 +6,11 @@
   font-style: normal;
   font-display: swap;
 }
+@tailwind utilities;
+@layer utilities {
+  .text-shadow-white { text-shadow: 0 0 5px #5e5e5e, 0 0 5px #000000; } 
+  .text-shadow-black { text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff; }
+}
 
 @theme {
   --font-crafty: "CraftyGirls", sans-serif;

@@ -1,0 +1,79 @@
+---
+const { item } = Astro.props;
+---
+
+<div class="w-full max-w-xl flex flex-col">
+
+  <p class="text-3xl mt-4 m-2 font-light text-black">{item.producto}</p>
+
+  <p class="descript mx-5 text-justify text-black text-sm">{item.descripcion}</p>
+
+  <span class="bg-gray-200/70 p-1 text-xs text-gray-700 w-fit rounded-lg ml-10 border border-gray-500 m-2 md:m-5">📖 Precio de catálogo: S/. {item.precioCatalogo.toFixed(2)}</span>
+
+  <div class="flex justify-between">
+    <p class="text-3xl mb-2 mx-10 font-bold text-purple-600 text-shadow-black">S/. {item.precio.toFixed(2)}</p>
+    <button
+  id="shareBtn"
+  class="px-4 py-2 rounded-xl bg-purple-500 text-white font-medium
+         transition-all duration-300 active:scale-55 mr-5"
+>
+  Compartir
+</button>
+
+  </div>
+  
+  <span class="bg-green-200/30 p-1 text-xs text-green-800 w-fit rounded-lg mx-10 border border-green-400 m-1">🚆 Recojo en cualquier estación del Metro 1 de Lima</span>
+
+  <span class="bg-yellow-200/30 p-1 text-xs text-yellow-800 w-fit rounded-lg mx-10 border border-yellow-400 m-1">🚚 El consto de envío particular depende de la ubicación</span>
+</div>
+
+
+<script>
+  const btn = document.getElementById("shareBtn");
+
+  async function copyLink() {
+    const url = window.location.href;
+
+    // Método moderno
+    try {
+      await navigator.clipboard.writeText(url);
+      return true;
+    } catch {
+      // Fallback clásico
+      try {
+        const textarea = document.createElement("textarea");
+        textarea.value = url;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        return true;
+      } catch {
+        return false;
+      }
+    }
+  }
+
+  btn?.addEventListener("click", async () => {
+    const ok = await copyLink();
+
+    if (ok) {
+      btn.textContent = "Enlace copiado ✓";
+      btn.classList.add("bg-green-600", "scale-110");
+    } else {
+      btn.textContent = "No se pudo copiar";
+      btn.classList.add("bg-red-600");
+    }
+
+    setTimeout(() => {
+      btn.textContent = "Compartir";
+      btn.classList.remove("bg-green-600","bg-red-600","scale-110");
+    }, 1800);
+  });
+</script>
+
+

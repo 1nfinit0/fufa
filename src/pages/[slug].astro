@@ -1,0 +1,34 @@
+---
+import products from '@data/rawData.json';
+import Layout from '@layouts/Layout.astro';
+import Carousel from '@components/Carousel.astro';
+import ProductInfo from '@components/ProductInfo.astro';
+import ProductVideos from '@components/ProductVideos.astro';
+
+import { getAllImages } from '@libs/getAllImages';
+import { getAllVideos } from '@libs/getAllVideos';
+import { getFirstImage } from '@libs/getFirstImage';
+
+export async function getStaticPaths() {
+
+  return products.map(producto => ({
+    params: {
+      slug: producto.id
+    },
+    props: {
+      producto
+    }
+  }));
+}
+
+const { producto } = Astro.props;
+
+const images = getAllImages(producto.id);
+const videos = getAllVideos(producto.id);
+---
+<Layout back="Volver" title={`Fufa | ${producto.producto}`} description={String(producto.precio)} image={getFirstImage(producto.id)} url={Astro.url.href} type="product" siteName="Fufa Store" locale="es_ES" twitterCard="summary_large_image" twitterCreator="@1nfinit0" twitterSite="@1nfinit0"> 
+
+  <Carousel images={images}/>
+  <ProductInfo item={producto} />
+  <ProductVideos videos={videos} />
+</Layout>

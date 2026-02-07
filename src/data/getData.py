@@ -278,3 +278,6 @@ def main():
     
 if __name__ == "__main__":
     main()
+
+
+# Los slugs son el id XD
