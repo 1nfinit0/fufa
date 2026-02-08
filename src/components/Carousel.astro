@@ -6,7 +6,7 @@ interface Props {
 const { images } = Astro.props;
 ---
 
-<div class="carousel relative w-full max-w-xl mx-auto overflow-hidden shadow-lg">
+<div class="carousel relative w-full max-w-lg mx-auto overflow-hidden shadow-lg">
   <div class="carousel-track flex transition-transform duration-300 ease-out">
     {images.map((src, index) => (
       <img

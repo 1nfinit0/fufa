@@ -4,6 +4,7 @@ import Layout from '@layouts/Layout.astro';
 import Carousel from '@components/Carousel.astro';
 import ProductInfo from '@components/ProductInfo.astro';
 import ProductVideos from '@components/ProductVideos.astro';
+import AddToCart from '@components/AddToCart.astro';
 
 import { getAllImages } from '@libs/getAllImages';
 import { getAllVideos } from '@libs/getAllVideos';
@@ -31,4 +32,5 @@ const videos = getAllVideos(producto.id);
   <Carousel images={images}/>
   <ProductInfo item={producto} />
   <ProductVideos videos={videos} />
+  <AddToCart item={producto} />
 </Layout>

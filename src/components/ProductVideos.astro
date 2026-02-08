@@ -5,7 +5,8 @@ interface Props {
 
 const { videos } = Astro.props;
 ---
-<div class="tokWrapper w-full max-w-lg mx-5 mt-6 mb-10 flex flex-col gap-4 px-2">
+<div class="tokWrapper w-full max-w-lg mx-5 mt-6 mb-10 flex flex-col gap-4 px-5">
+  <p class="text-lg font-light">Más sobre tu producto:</p>
   {videos.map((video, i) => (
     <div class="videoContainer relative flex items-center justify-center">
       <video 
@@ -17,7 +18,10 @@ const { videos } = Astro.props;
       <source src={video} type="video/mp4" />
       Tu navegador no soporta el elemento de video.
     </video>
-    <div class="mute text-center text-5xl text-gray-500 absolute bottom-15 right-2 cursor-pointer" data-video={`video-${i}`}>
+    <div class="play text-center text-4xl text-gray-200 absolute bottom-12 left-4 cursor-pointer" data-video={`video-${i}`}>
+      ▶️
+    </div>
+    <div class="mute text-center text-5xl text-gray-500 absolute bottom-12 right-2 cursor-pointer" data-video={`video-${i}`}>
       🔉
     </div>
     </div>
@@ -39,6 +43,29 @@ const { videos } = Astro.props;
       }
     });
   });
+
+  document.querySelectorAll(".play").forEach(playButton => {
+  const videoId = (playButton as HTMLElement).dataset.video;
+  if (!videoId) return;
+
+  const video = document.getElementById(videoId) as HTMLVideoElement;
+  if (!video) return;
+
+  // Click solo controla reproducción
+  playButton.addEventListener("click", () => {
+    video.paused ? video.play() : video.pause();
+  });
+
+  // Sincronización REAL
+  video.addEventListener("play", () => {
+    playButton.textContent = "⏸️";
+  });
+
+  video.addEventListener("pause", () => {
+    playButton.textContent = "▶️";
+  });
+});
+
 
   document.querySelectorAll(".mute").forEach(muteButton => {
     muteButton.addEventListener("click", () => {
