@@ -167,46 +167,81 @@ def main():
         except Exception as e:
             print(f"Error procesando producto {item.get('id', 'ID desconocido')}: {e}")
         
+    
     def downloadImagesForProduct(item):
-        
-        for entry in os.listdir("."): 
-                if entry: 
+
+        # --- limpiar solo archivos del directorio actual ---
+        for entry in os.listdir("."):
+            if os.path.isfile(entry):
+                try:
                     os.remove(entry)
-        
-        image_url_list = []
-        image_url_list.append(item['image1'])
-        image_url_list.append(item['image2'])
-        image_url_list.append(item['image3'])
-        image_url_list.append(item['image4'])
-        
+                except Exception as e:
+                    print(f"No se pudo eliminar {entry}: {e}")
+
+        image_url_list = [
+            item.get('image1'),
+            item.get('image2'),
+            item.get('image3'),
+            item.get('image4'),
+        ]
+
         image_url_list = [url for url in image_url_list if url]
-        
+
         print(f"Descargando imágenes para {item['id']}")
-        
+
         VALID_IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".tiff"}
 
+        HEADERS = {
+            "User-Agent": (
+                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/120 Safari/537.36"
+            ),
+            "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+            "Referer": "https://www.yanbal.com/"
+        }
+
+        session = requests.Session()
+        session.headers.update(HEADERS)
+
+        # --- descarga ---
         for i, url in enumerate(image_url_list, start=1):
-            response = requests.get(url)
-            response.raise_for_status()
+            try:
+                parsed = urlparse(url)
+                referer = f"{parsed.scheme}://{parsed.netloc}/"
 
-            parsed = urlparse(url)
-            filename = os.path.basename(parsed.path)
-            name, ext = os.path.splitext(filename)
+                headers = {
+                    "User-Agent": session.headers["User-Agent"],
+                    "Accept": session.headers["Accept"],
+                    "Referer": referer
+                }
 
-            ext = ext.lower()
+                response = session.get(url, headers=headers, timeout=15)
+                response.raise_for_status()
 
-            mime_type = response.headers.get("Content-Type", "").split(";")[0]
-            guessed_ext = mimetypes.guess_extension(mime_type)
+                parsed = urlparse(url)
+                filename = os.path.basename(parsed.path)
+                name, ext = os.path.splitext(filename)
+                ext = ext.lower()
 
-            if ext not in VALID_IMAGE_EXTS:
-                ext = guessed_ext or ".bin"
+                mime_type = response.headers.get("Content-Type", "").split(";")[0]
+                guessed_ext = mimetypes.guess_extension(mime_type)
 
-            final_name = f"{i}{ext}"
+                if ext not in VALID_IMAGE_EXTS:
+                    ext = guessed_ext or ".bin"
 
-            with open(final_name, "wb") as f:
-                f.write(response.content)
+                final_name = f"{i}{ext}"
 
-        print(f"\tImágenes descargadas para {item['id']}\n")
+                with open(final_name, "wb") as f:
+                    f.write(response.content)
+
+                print(f"\t✔ Imagen {i} descargada -> {final_name}")
+
+            except Exception as e:
+                print(f"\t✘ Error descargando imagen {i}: {e}")
+                continue
+
+        print(f"\tProceso terminado para {item['id']}\n")
+
         
     def removeDownloadedMedia(item):
         media_path = pathBase / "public" / "media" / item['id']
