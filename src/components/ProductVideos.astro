@@ -13,6 +13,7 @@ const { videos } = Astro.props;
       id={`video-${i}`}
       muted
       playsinline
+      loop
       class="shadow-lg m-5 rounded-2xl cursor-pointer"
     >
       <source src={video} type="video/mp4" />
@@ -22,7 +23,7 @@ const { videos } = Astro.props;
       ▶️
     </div>
     <div class="mute text-center text-5xl text-gray-500 absolute bottom-12 right-2 cursor-pointer" data-video={`video-${i}`}>
-      🔉
+      🔇
     </div>
     </div>
   ))}
@@ -33,7 +34,6 @@ const { videos } = Astro.props;
   function initVideos() {
     if (initialized) return;
     initialized = true;
-    // Play/Pause al hacer click
   document.querySelectorAll("video").forEach(video => {
     video.addEventListener("click", () => {
       if (video.paused) {
@@ -79,7 +79,7 @@ const { videos } = Astro.props;
           muteButton.textContent = "🔊";
         } else {
           video.muted = true;
-          muteButton.textContent = "🔉";
+          muteButton.textContent = "🔇";
         }
       }
     });

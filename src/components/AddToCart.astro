@@ -2,15 +2,22 @@
 
 const { item } = Astro.props;
 
-const phone = "51922917150";
+const code = "00" + Math.random().toString(36).substring(5, 8).toUpperCase();
+
+const phone = "5199713969";
 
 const message = [
-  "Hola Fufa 👋",
+  `📦 Pedido:`,
+  `> ${code}`,
   "",
-  `Quiero pedir el producto: ${item.producto}`,
-  "que vi en su tienda.",
+  "Hola 👋",
   "",
-  "¿Podrían darme más información?"
+  `Quiero el \`${item.producto}\``,
+  "",
+  `*S/. ${item.precio}*`,
+  "",
+  "¿Podrían darme más información?",
+  `https://fufa-pearl.vercel.app/${item.id}`,
 ].join("\n");
 
 const whatsappUrl =
