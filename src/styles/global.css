@@ -32,15 +32,15 @@
 }
 
 .product-row::-webkit-scrollbar-thumb:hover {
-  background: #c7c7c7;
+  background: #e7e7e7;
 }
 
 
 /* Firefox */
 .product-row {
   scrollbar-width: thin;
-  scrollbar-color: #e2e2e2 transparent;
+  scrollbar-color: #e2e2e29c transparent;
 }
 .product-row:hover {
-  scrollbar-color: #c7c7c7 transparent;
+  scrollbar-color: #ebebeb transparent;
 }
