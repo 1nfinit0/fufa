@@ -33,7 +33,7 @@
     "video2": "https://www.tiktok.com/@camiconsultora.burzaco/video/7566307896535862535?q=tododia%20pera&t=1770080152919",
     "video3": "https://www.tiktok.com/@lucianalarapb/video/7491067188128894214?q=tododia%20crema%20de%20manos%20pera&t=1770080205284",
     "video4": null,
-    "estado": "Público"
+    "estado": "Privado"
   },
   {
     "id": "CUI-CY-000004",
@@ -285,6 +285,60 @@
     "video2": "https://www.tiktok.com/@mariaguerrero631/video/7552727546748603659?q=BB%20CREAM%20MATIFICANTE%20claro&t=1770652263719",
     "video3": "https://www.tiktok.com/@andreaavendano.q/video/7524874369366117638?q=BB%20CREAM%20MATIFICANTE%20claro&t=1770652263719",
     "video4": "https://www.tiktok.com/@viam.alvarado/video/7574590541212470548?q=BB%20CREAM%20MATIFICANTE%20claro&t=1770652263719",
+    "estado": "Público"
+  },
+  {
+    "id": "PER-YA-000039",
+    "categoria": "Perfumes y Cosméticos",
+    "producto": "Colonia Yanbal Eau Vitale Lavanda 200ml",
+    "marca": "Yanbal",
+    "precio": 39.0,
+    "precioCatalogo": 52.9,
+    "descripcion": "La aromaterapia es una experiencia sensorial, a través del poder de los aromas de plantas milenarias promueven balance y armonía en la mente y el espíritu. Experiméntala respirando profundamente. Siente los beneficios del aroma de Eau Vitale Lavanda que promueve la sensación de tranquilidad y mejora la sensacion de descanso, comprobado por la neurociencia.",
+    "image1": "https://www.yanbal.com/medias/500Wx500H-Yanbal-OriginalFormat-20013689-01.jpg?context=bWFzdGVyfGltYWdlc3wyNjY0OHxpbWFnZS9qcGVnfGFHVXlMMmcyTVM4eE1ETTFNakkyTURjME16RTVPQzgxTURCWGVEVXdNRWhmV1dGdVltRnNMVTl5YVdkcGJtRnNSbTl5YldGMFh6SXdNREV6TmpnNVh6QXhMbXB3Wnd8ZDM3Y2Q4YjJiMmUwNDcyN2ViMjU0MTY1YWE0MzhjZWRhODI1Njk4NWQyN2NmNGJhMDU0Y2Q2YmZmZTUyZTI4Yg",
+    "image2": "https://dcuk1cxrnzjkh.cloudfront.net/seller/1705369691823-2L.jpg",
+    "image3": "https://dcuk1cxrnzjkh.cloudfront.net/seller/1705369691823-4L.jpg",
+    "image4": "https://tse2.mm.bing.net/th/id/OIP.lZtmnIQz9-Pm9aIo7D9hxgAAAA?pid=ImgDet&w=474&h=414&rs=1&o=7&rm=3",
+    "video1": "https://www.tiktok.com/@nelybernal14/video/7600971705384766740?q=Colonia%20Yanbal%20Eau%20Vitale%20Lavanda&t=1770750528662",
+    "video2": "https://www.tiktok.com/@fernandazeballoss/video/7455685556949798149?q=Colonia%20Yanbal%20Eau%20Vitale%20Lavanda&t=1770750528662",
+    "video3": "https://www.tiktok.com/@ofertas.unique.yanbal/video/7381239775149296902?q=Colonia%20Yanbal%20Eau%20Vitale%20Lavanda&t=1770750528662",
+    "video4": "https://www.tiktok.com/@luisagtiendavirtual/video/7473692193723567415?q=Colonia%20Yanbal%20Eau%20Vitale%20Lavanda&t=1770750528662",
+    "estado": "Público"
+  },
+  {
+    "id": "PER-YA-000040",
+    "categoria": "Perfumes y Cosméticos",
+    "producto": "Temptation Eau de Parfum Mujer Yanbal 50ml",
+    "marca": "Yanbal",
+    "precio": 75.0,
+    "precioCatalogo": 87.0,
+    "descripcion": "Un aroma floral especiado con notas de rosa búlgara, gardenia y clavo. Su intensidad resalta la sensualidad de una mujer irresistible. Inspirado en mujeres seguras, arrolladoras y llenas de actitud. El empaque refleja feminidad y deseo con pétalos de rosa. Un diseño que transmite sensualidad y seguridad en cada detalle.",
+    "image1": "https://media.falabella.com/falabellaPE/119528031_01/w=1200,h=1200,fit=pad",
+    "image2": "https://media.falabella.com/falabellaPE/141977162_01/public",
+    "image3": "https://http2.mlstatic.com/D_NQ_NP_2X_905533-MCO101778702323_122025-F.webp",
+    "image4": "https://http2.mlstatic.com/D_NQ_NP_2X_906847-MCO101778911393_122025-F.webp",
+    "video1": "https://www.tiktok.com/@danna.joselin.nez/video/7571594382172769557?q=Temptation%20mujer&t=1770751086914",
+    "video2": "https://www.tiktok.com/@perfumeriaaromasymas/video/7590399083601218823?q=Temptation%20mujer&t=1770751086914",
+    "video3": "https://www.tiktok.com/@lindastorebelleza/video/7577848658905894151?q=Temptation%20mujer&t=1770751086914",
+    "video4": "https://www.tiktok.com/@carmenarellano532/video/7415613997279350048?q=Temptation%20mujer&t=1770751086914",
+    "estado": "Público"
+  },
+  {
+    "id": "CUI-LB-000042",
+    "categoria": "Cuidado Personal",
+    "producto": "Loción Perfumada Liasson 130 ml",
+    "marca": "LBel",
+    "precio": 25.0,
+    "precioCatalogo": 84.6,
+    "descripcion": "Loción corporal humectante con un bouquet floral sofisticado. Destacan notas de lirio de valle e iris, sobre maderas y especias. Deja la piel suave, llena de vida y prolonga el aroma del perfume. Su fragancia floral se impregna gracias a la perfumación por capas. Un aroma distinguible que complementa y potencia tu perfume favorito.",
+    "image1": "https://belcorpperu.vtexassets.com/arquivos/ids/374751-1600-auto?v=638917648580870000&width=1600&height=auto&aspect=true",
+    "image2": "https://belcorpperu.vtexassets.com/arquivos/ids/374748-1600-auto?v=638917648576170000&width=1600&height=auto&aspect=true",
+    "image3": "https://belcorpperu.vtexassets.com/arquivos/ids/374750-1600-auto?v=638917648579470000&width=1600&height=auto&aspect=true",
+    "image4": null,
+    "video1": "https://www.tiktok.com/@esikalebelcyzone25/video/7464619312326642949?q=crema%20Liasson%20130%20ml%20&t=1770751890901",
+    "video2": "https://www.tiktok.com/@naturmaya.pe/video/7281432190309764357?q=crema%20Liasson%20130%20ml%20&t=1770751890901",
+    "video3": null,
+    "video4": null,
     "estado": "Público"
   }
 ]
