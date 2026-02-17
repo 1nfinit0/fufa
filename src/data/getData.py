@@ -281,7 +281,7 @@ def main():
     
     if cantidadPM > 0:
         
-        campos_ignorados = {"producto", "precio", "precioCatalogo", "descripcion"}
+        campos_ignorados = {"precio", "precioCatalogo", "descripcion"}
         old_map = {p["id"]: p for p in old_data_json}
         
         for producto in productosModificados(json_loaded, old_data_json):
