@@ -291,14 +291,27 @@ def main():
     if cantidadPM > 0:
         for producto in productosModificados(json_loaded, old_data_json):
             try:
-                removeDownloadedMedia(producto)
-                makeDirForNewProduct(producto)
-                os.chdir(pathBase / f"public/media/{producto['id']}/videos")
-                downloadVideosForProduct(producto)
-                os.chdir(pathBase)
-                os.chdir(pathBase / f"public/media/{producto['id']}/images")
-                downloadImagesForProduct(producto)
-                os.chdir(pathBase)
+                
+                # Condición: Si el la diferencia está en los campos: producto, precio, precioCatalogo y descripcion entonces no hacer nada:
+                
+                if all(
+                    producto.get(campo) == next(
+                        (item.get(campo) for item in old_data_json if item["id"] == producto["id"]), 
+                        None
+                    )
+                    for campo in ["producto", "precio", "precioCatalogo", "descripcion"]
+                ):
+                    print(f"Producto {producto['id']} modificado pero sin cambios relevantes, se omite.")
+                    continue
+                else: 
+                    removeDownloadedMedia(producto)
+                    makeDirForNewProduct(producto)
+                    os.chdir(pathBase / f"public/media/{producto['id']}/videos")
+                    downloadVideosForProduct(producto)
+                    os.chdir(pathBase)
+                    os.chdir(pathBase / f"public/media/{producto['id']}/images")
+                    downloadImagesForProduct(producto)
+                    os.chdir(pathBase)
         
             except Exception as e:
                 print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")

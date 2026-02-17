@@ -270,9 +270,9 @@
     "estado": "Privado"
   },
   {
-    "id": "CUI-YA-000038",
+    "id": "CUI-YA-000047",
     "categoria": "Cuidado Personal",
-    "producto": "BB Cream Hidratante Matificante con Color Claro",
+    "producto": "BB Cream Hidratante Matificante Tono Claro",
     "marca": "Yanbal",
     "precio": 47.0,
     "precioCatalogo": 52.5,
@@ -324,7 +324,7 @@
     "estado": "Público"
   },
   {
-    "id": "CUI-LB-000042",
+    "id": "CUI-LB-000046",
     "categoria": "Cuidado Personal",
     "producto": "Loción Perfumada Liasson 130 ml",
     "marca": "LBel",
