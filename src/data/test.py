@@ -8,7 +8,7 @@ try:
   if a != 1:
     imprime()
   
-  else: pass
+  print("Se modifica")
   
 except Exception as e:
   print(f"Exception: {e}")

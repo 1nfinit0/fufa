@@ -54,7 +54,7 @@ def main():
         with open(Path(__file__).parent / "rawData.json", "r", encoding="utf-8") as f:
             old_data_json = json.load(f)
             
-        print("Las fuentes son iguales:",old_data_json == json_loaded)
+        print("\nLas fuentes son iguales:",old_data_json == json_loaded)
     except Exception as e:
         print(f"Error durante el proceso: {e}")
 
@@ -124,11 +124,9 @@ def main():
     cantidadPE =  len(productosEliminados(json_loaded, old_data_json))
     cantidadPM =  len(productosModificados(json_loaded, old_data_json))
     
-    #     ❯ python getData.py
-    # Las fuentes son iguales: False
-    # Productos Nuevos: 15
-    # Productos Eliminados: 0
-    # Productos Modificados: 0
+    print(f"\nProductos Nuevos: {cantidadPN}\n")
+    print(f"Productos Eliminados: {cantidadPE}\n")
+    print(f"Productos Modificados: {cantidadPM}\n")
     
     def makeDirForNewProduct(item):
         imgDir = pathBase / "public" / "media" / item['id'] / "images"
@@ -256,9 +254,6 @@ def main():
         print(f"Eliminado: {item['id']}")
     
     
-    print(f"Productos Nuevos: {cantidadPN}\n")
-    
-    
     if cantidadPN > 0:
         for producto in productosNuevos(json_loaded, old_data_json):
             try:
@@ -275,8 +270,6 @@ def main():
                 print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
                 os.chdir(pathBase) if 'pathBase' in locals() else None
                 continue 
-    
-    print(f"Productos Eliminados: {cantidadPE}\n")
             
     if cantidadPE > 0:
         for producto in productosEliminados(json_loaded, old_data_json):
@@ -285,33 +278,37 @@ def main():
             except Exception as e:
                 print(f"Error eliminando medios para producto {producto.get('id', 'ID desconocido')}: {e}")
                 continue
-            
-    print(f"Productos Modificados: {cantidadPM}\n")
     
     if cantidadPM > 0:
+        
+        campos_ignorados = {"producto", "precio", "precioCatalogo", "descripcion"}
+        old_map = {p["id"]: p for p in old_data_json}
+        
         for producto in productosModificados(json_loaded, old_data_json):
             try:
-                
-                # Condición: Si el la diferencia está en los campos: producto, precio, precioCatalogo y descripcion entonces no hacer nada:
-                
-                if all(
-                    producto.get(campo) == next(
-                        (item.get(campo) for item in old_data_json if item["id"] == producto["id"]), 
-                        None
-                    )
-                    for campo in ["producto", "precio", "precioCatalogo", "descripcion"]
-                ):
+                old_producto = old_map[producto["id"]]
+
+                campos_modificados = {
+                    k for k in producto
+                    if producto.get(k) != old_producto.get(k)
+                }
+
+                if campos_modificados.issubset(campos_ignorados):
                     print(f"Producto {producto['id']} modificado pero sin cambios relevantes, se omite.")
                     continue
-                else: 
-                    removeDownloadedMedia(producto)
-                    makeDirForNewProduct(producto)
-                    os.chdir(pathBase / f"public/media/{producto['id']}/videos")
-                    downloadVideosForProduct(producto)
-                    os.chdir(pathBase)
-                    os.chdir(pathBase / f"public/media/{producto['id']}/images")
-                    downloadImagesForProduct(producto)
-                    os.chdir(pathBase)
+
+                # -------- cambios relevantes --------
+                removeDownloadedMedia(producto)
+                makeDirForNewProduct(producto)
+
+                os.chdir(pathBase / f"public/media/{producto['id']}/videos")
+                downloadVideosForProduct(producto)
+
+                os.chdir(pathBase)
+                os.chdir(pathBase / f"public/media/{producto['id']}/images")
+                downloadImagesForProduct(producto)
+
+                os.chdir(pathBase)
         
             except Exception as e:
                 print(f"Error procesando producto {producto.get('id', 'ID desconocido')}: {e}")
