@@ -8,12 +8,12 @@ export interface Banner {
 }
 
 const banners: Banner[] = [
-  {
-    id: 0,
-    imageUrl: '/banners/0.webp',
-    linkUrl: '',
-    altText: 'Promotional Banner 0',
-  },
+  // {
+  //   id: 0,
+  //   imageUrl: '/banners/0.webp',
+  //   linkUrl: '',
+  //   altText: 'Promotional Banner 0',
+  // },
   {
     id: 1,
     imageUrl: '/banners/1.webp',
