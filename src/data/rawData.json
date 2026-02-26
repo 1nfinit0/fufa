@@ -141,7 +141,7 @@
     "video2": "https://www.tiktok.com/@eydestilonatural/video/7580221759799053575?q=Jabones%20Tododia%20Celebra%20La%20Vida&t=1770081600081",
     "video3": null,
     "video4": null,
-    "estado": "Público"
+    "estado": "Privado"
   },
   {
     "id": "PRO-YA-000010",
@@ -159,7 +159,7 @@
     "video2": "https://www.tiktok.com/@andreglamec/video/7587466796224056594?q=Total%20Block%20ultraprotecci%C3%B3n&t=1770082027602",
     "video3": "https://www.tiktok.com/@danna.joselin.nez/video/7593853619154226453?q=Total%20Block%20ultraprotecci%C3%B3n&t=1770082027602",
     "video4": null,
-    "estado": "Público"
+    "estado": "Privado"
   },
   {
     "id": "PRO-NA-000011",
@@ -411,6 +411,60 @@
     "video2": "https://www.tiktok.com/@eri_style_b/video/7534183097122802950?q=Cacao.%20Pulpa%20hidratante%20corporal%20400%20ml.%20Natura%20Ekos&t=1771359224186",
     "video3": "https://www.tiktok.com/@arlenedourado/video/7514754784851676422?q=Cacao.%20Pulpa%20hidratante%20corporal%20400%20ml.%20Natura%20Ekos&t=1771359224186",
     "video4": "https://www.tiktok.com/@rosemakeup148/video/7513988717430820152?q=Cacao.%20Pulpa%20hidratante%20corporal%20400%20ml.%20Natura%20Ekos&t=1771359224186",
+    "estado": "Público"
+  },
+  {
+    "id": "CUI-CY-000059",
+    "categoria": "Cuidado Personal",
+    "producto": "Mystic Star set perfume 50 ml + crema corporal 130 ml",
+    "marca": "Cyzone",
+    "precio": 46.0,
+    "precioCatalogo": 54.9,
+    "descripcion": "Crema Perfumada Mystic Star que hidrata tu piel hasta por 24 horas mientras intensifica y prolonga la fragancia Mystic Star, envolviéndote en un aroma profundo, dulce y sofisticado. Su fórmula ligera de rápida absorción deja la piel suave, luminosa y con un glow natural, perfecta para destacar tu lado más místico. ¡Déjate llevar por una fragancia que brilla contigo! Presentación de 130 ml con registro NSOC34870-24CO.",
+    "image1": "https://http2.mlstatic.com/D_Q_NP_2X_897094-MPE107028712077_022026-P.webp",
+    "image2": "https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/533855418_122135373794817940_1321993142332408558_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=5dW9o7aURgkQ7kNvwHLrea3&_nc_oc=AdnVA_VYXUqwPEnEImKpa32Dj-Gr8izt01DC4uqbGlhEQG3reI7E67hJ6QAWU_IdbvA&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=4I6Q6JOoAU-xIs-_HuGgqw&oh=00_Afumg_v9eCeZ8HfuNLo4fwK7NWTOLLSDpesAjTwNVl6fEg&oe=69A62462",
+    "image3": "https://lechic.pe/archivos/producto/1763-mystic-star-perfume-femenino-50-ml.jpg",
+    "image4": "https://belcorpperu.vtexassets.com/arquivos/ids/418710-1600-auto?v=639058194135070000&width=1600&height=auto&aspect=true",
+    "video1": "https://www.tiktok.com/@adyperfumeria/video/7600934828720082197?q=mystic%20stars%20cyzone&t=1772120477880",
+    "video2": "https://www.tiktok.com/@itsanysilva/video/7441610793449426232?q=mystic%20stars%20cyzone&t=1772120477880",
+    "video3": "https://www.tiktok.com/@luxtor.pe/video/7574217087007182098?q=mystic%20stars%20cyzone&t=1772120477880",
+    "video4": "https://www.tiktok.com/@cyzone_oficial/video/7554940331213540620?q=mystic%20stars%20cyzone&t=1772120477880",
+    "estado": "Público"
+  },
+  {
+    "id": "PER-LB-000060",
+    "categoria": "Perfumes y Cosméticos",
+    "producto": "Destiné Colonia Florence Floral Rosé",
+    "marca": "LBel",
+    "precio": 34.0,
+    "precioCatalogo": 44.9,
+    "descripcion": "Colonia para mujer inspirada en un jardín de narcisos en Florencia, diseñada para capturar la esencia de la belleza italiana con un delicado bouquet floral y un toque de elegancia atemporal. Su fragancia única te transporta a los paisajes encantadores de la Toscana, envolviéndote en una experiencia sensorial sofisticada. Presentación exclusiva con registro NSOC33166-24CO.",
+    "image1": "https://media.falabella.com/falabellaPE/139986169_01/w=1200,h=1200,fit=pad",
+    "image2": "https://http2.mlstatic.com/D_NQ_NP_2X_747334-MLA81381941712_122024-F.webp",
+    "image3": "https://http2.mlstatic.com/D_NQ_NP_2X_693971-MLA81651361741_122024-F.webp",
+    "image4": "https://instagram.flim28-1.fna.fbcdn.net/v/t51.82787-15/514675444_17953289321978129_2458204023520014867_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MzY2NzQyNDk1MDE5MzcyOTA2NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTA4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=cCyhVhLX1QAQ7kNvwHolRB_&_nc_oc=Admb6uAVXS6Yakrem8RjGP-68EMVD_scc5GJ6Vaxe8Jcp-_8fcpnr5wZWGv_C1jumIY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.flim28-1.fna&_nc_gid=k-jx3F_2_v_6EZuNNzG8lw&oh=00_Afv_styx7bHoHnhUWgBjSQj0QlFS1aeIiEs3ad0BmXk3Fw&oe=69A62419",
+    "video1": "https://www.tiktok.com/@sweetperfumecdmx/video/7602383486812572949?q=Destin%C3%A9%20Colonia%20Florence%20Floral%20Ros%C3%A9&t=1772120860713",
+    "video2": "https://www.tiktok.com/@adrianarequejo24/video/7604304798703242516?q=Destin%C3%A9%20Colonia%20Florence%20Floral%20Ros%C3%A9&t=1772120860713",
+    "video3": "https://www.tiktok.com/@brenda.baez.cano/video/7532611696083340551?q=Destin%C3%A9%20Colonia%20Florence%20Floral%20Ros%C3%A9&t=1772120860713",
+    "video4": null,
+    "estado": "Público"
+  },
+  {
+    "id": "CUI-ES-000061",
+    "categoria": "Cuidado Personal",
+    "producto": "Impredecible for Woman perfume 50 ml + crema nutritiva para manos 75 g",
+    "marca": "Esika",
+    "precio": 62.0,
+    "precioCatalogo": 69.9,
+    "descripcion": "Set Impredecible for Woman: Eau de parfum oriental dulce de alta concentración y larga duración, con notas de vainilla de Madagascar y freesia de Japón, creado con Essent Tech y ganador de los premios de belleza Vanidades 2019. Capacidad 50 ml. Incluye crema nutritiva para manos que perfuma, hidrata y nutre hasta por 48 horas. Capacidad 75 g.",
+    "image1": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5356/PMP20001235924/full_image-1.jpeg",
+    "image2": "https://belcorpperu.vtexassets.com/arquivos/ids/446703-1600-auto?v=639064428181230000&width=1600&height=auto&aspect=true",
+    "image3": "https://mercury.vtexassets.com/arquivos/ids/21847609/200108045.jpg?v=638949614714730000",
+    "image4": "https://http2.mlstatic.com/D_NQ_NP_815703-MLM77441501503_072024-O.webp",
+    "video1": "https://www.tiktok.com/@taguenaturadescuentos/video/7445702033534946566?q=Impredecible%20for%20Woman&t=1772121208024",
+    "video2": "https://www.tiktok.com/@coquetajfp/video/7566442501452745991?q=Impredecible%20for%20Woman&t=1772121208024",
+    "video3": "https://www.tiktok.com/@kattia_alexandraga/video/7601906238783425812?q=Impredecible%20for%20Woman&t=1772121208024",
+    "video4": null,
     "estado": "Público"
   }
 ]
