@@ -130,7 +130,7 @@
     "categoria": "Cuidado Personal",
     "producto": "Jabones Tododia Celebra La Vida | Caja con 5 uds. de 90g c/u",
     "marca": "Natura",
-    "precio": 30.0,
+    "precio": 35.0,
     "precioCatalogo": 41.9,
     "descripcion": "Deja tu piel limpia, radiante y delicadamente perfumada. Una excelente opción para regalar y compartir bienestar. Fórmula con ingredientes de origen natural cuidadosamente seleccionados. Ayuda a mantener la hidratación y suavidad de la piel.",
     "image1": "https://github.com/1nfinit0/Fufa_Store/blob/master/assets/products/cuidado_k/cuidado_k.jpg?raw=true",
@@ -141,7 +141,7 @@
     "video2": "https://www.tiktok.com/@eydestilonatural/video/7580221759799053575?q=Jabones%20Tododia%20Celebra%20La%20Vida&t=1770081600081",
     "video3": null,
     "video4": null,
-    "estado": "Privado"
+    "estado": "Público"
   },
   {
     "id": "PRO-YA-000010",
@@ -159,7 +159,7 @@
     "video2": "https://www.tiktok.com/@andreglamec/video/7587466796224056594?q=Total%20Block%20ultraprotecci%C3%B3n&t=1770082027602",
     "video3": "https://www.tiktok.com/@danna.joselin.nez/video/7593853619154226453?q=Total%20Block%20ultraprotecci%C3%B3n&t=1770082027602",
     "video4": null,
-    "estado": "Privado"
+    "estado": "Público"
   },
   {
     "id": "PRO-NA-000011",
@@ -238,7 +238,7 @@
     "categoria": "Perfumes y Cosméticos",
     "producto": "Wild Country Perfume de Hombre Avon 100ml",
     "marca": "Avon",
-    "precio": 25.0,
+    "precio": 35.0,
     "precioCatalogo": 54.9,
     "descripcion": "Eau de cologne amaderada de frescura ligera, perfecta para climas cálidos. Presentación de 100 mL, aplicable en cualquier cantidad sin perder armonía. Libre de crueldad, respetando el bienestar animal. Tradición colombiana desde 1967, un clásico atemporal.",
     "image1": "https://http2.mlstatic.com/D_Q_NP_758513-MLU74339618483_022024-F.webp",
@@ -267,14 +267,14 @@
     "video2": "https://www.tiktok.com/@cyzone_oficial/video/7502618092263099653?q=Sweet%20Black%20Intense%2C%2050%20ml&t=1770084228510",
     "video3": "https://www.tiktok.com/@tamaradelav/video/7191622945763052806?q=Sweet%20Black%20Intense%2C%2050%20ml&t=1770084228510",
     "video4": "https://www.tiktok.com/@esika.lbel.cyzone.y/video/7299221643317038342?q=Sweet%20Black%20Intense%2C%2050%20ml&t=1770084228510",
-    "estado": "Privado"
+    "estado": "Público"
   },
   {
     "id": "CUI-YA-000048",
     "categoria": "Cuidado Personal",
     "producto": "BB Cream Hidratante Matificante Tono Claro",
     "marca": "Yanbal",
-    "precio": 47.0,
+    "precio": 44.0,
     "precioCatalogo": 52.5,
     "descripcion": "La combinación perfecta entre crema hidratante hidratante y base de maquillaje para pieles mixtas y grasas. Su fórmula multibeneficios hidrata hasta por 48 horas, protege con SPF 30 y unifica el tono de la piel con un acabado súper natural. Además, ayuda a controlar el brillo con un acabado mate que dura todo el día. Su formula no comedogenica, no obstruye los poros de la piel.",
     "image1": "https://www.yanbal.com/medias/20014033-02.jpg?context=bWFzdGVyfGltYWdlc3w4MTE1OHxpbWFnZS9qcGVnfGFESmpMMmc1TUM4eE1EYzNORFV5TmpRNU1qY3dNaTh5TURBeE5EQXpNMTh3TWk1cWNHY3wxNjk2YWQ1ZTEyNmMzM2U0Y2UzMzdiZDJiMjc5MjU0NzU0MGU3OTUxNjk4MThkMzcwNjY5MmE2ZDMzMTFjZjU0",
@@ -292,7 +292,7 @@
     "categoria": "Perfumes y Cosméticos",
     "producto": "Colonia Yanbal Eau Vitale Lavanda 200ml",
     "marca": "Yanbal",
-    "precio": 39.0,
+    "precio": 37.0,
     "precioCatalogo": 52.9,
     "descripcion": "La aromaterapia es una experiencia sensorial, a través del poder de los aromas de plantas milenarias promueven balance y armonía en la mente y el espíritu. Experiméntala respirando profundamente. Siente los beneficios del aroma de Eau Vitale Lavanda que promueve la sensación de tranquilidad y mejora la sensacion de descanso, comprobado por la neurociencia.",
     "image1": "https://www.yanbal.com/medias/500Wx500H-Yanbal-OriginalFormat-20013689-01.jpg?context=bWFzdGVyfGltYWdlc3wyNjY0OHxpbWFnZS9qcGVnfGFHVXlMMmcyTVM4eE1ETTFNakkyTURjME16RTVPQzgxTURCWGVEVXdNRWhmV1dGdVltRnNMVTl5YVdkcGJtRnNSbTl5YldGMFh6SXdNREV6TmpnNVh6QXhMbXB3Wnd8ZDM3Y2Q4YjJiMmUwNDcyN2ViMjU0MTY1YWE0MzhjZWRhODI1Njk4NWQyN2NmNGJhMDU0Y2Q2YmZmZTUyZTI4Yg",
@@ -310,7 +310,7 @@
     "categoria": "Perfumes y Cosméticos",
     "producto": "Temptation Eau de Parfum Mujer Yanbal 50ml",
     "marca": "Yanbal",
-    "precio": 75.0,
+    "precio": 68.0,
     "precioCatalogo": 87.0,
     "descripcion": "Un aroma floral especiado con notas de rosa búlgara, gardenia y clavo. Su intensidad resalta la sensualidad de una mujer irresistible. Inspirado en mujeres seguras, arrolladoras y llenas de actitud. El empaque refleja feminidad y deseo con pétalos de rosa. Un diseño que transmite sensualidad y seguridad en cada detalle.",
     "image1": "https://media.falabella.com/falabellaPE/119528031_01/w=1200,h=1200,fit=pad",
@@ -346,7 +346,7 @@
     "categoria": "Perfumes y Cosméticos",
     "producto": "Perfume de Mujer Prints Adventure, 30 ml",
     "marca": "Cyzone",
-    "precio": 20.0,
+    "precio": 12.5,
     "precioCatalogo": 42.0,
     "descripcion": "Perfume de Mujer Prints Adventure, eau de parfum floral con bergamota energizante, ylang-ylang exótico y sándalo envolvente, de alta concentración y larga duración, inspirado en vivir aventuras intensas y emociones sin límites, disponible en presentación de 30 ml con registro NSOC23134-23CO, ¡un mundo de experiencias te espera!",
     "image1": "https://www.luxtor.pe/recursos/tienda/img/productos/Perfume-Femenino-Adventure-Prints-Cyzone-30-ml.jpg",
@@ -454,7 +454,7 @@
     "categoria": "Cuidado Personal",
     "producto": "Impredecible for Woman perfume 50 ml + crema nutritiva para manos 75 g",
     "marca": "Esika",
-    "precio": 62.0,
+    "precio": 60.0,
     "precioCatalogo": 69.9,
     "descripcion": "Set Impredecible for Woman: Eau de parfum oriental dulce de alta concentración y larga duración, con notas de vainilla de Madagascar y freesia de Japón, creado con Essent Tech y ganador de los premios de belleza Vanidades 2019. Capacidad 50 ml. Incluye crema nutritiva para manos que perfuma, hidrata y nutre hasta por 48 horas. Capacidad 75 g.",
     "image1": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5356/PMP20001235924/full_image-1.jpeg",
@@ -465,6 +465,42 @@
     "video2": "https://www.tiktok.com/@coquetajfp/video/7566442501452745991?q=Impredecible%20for%20Woman&t=1772121208024",
     "video3": "https://www.tiktok.com/@kattia_alexandraga/video/7601906238783425812?q=Impredecible%20for%20Woman&t=1772121208024",
     "video4": null,
+    "estado": "Público"
+  },
+  {
+    "id": "CUI-CY-000063",
+    "categoria": "Cuidado Personal",
+    "producto": "Crema Perfumada Corporal Y25 - Cyzone 130 ml",
+    "marca": "Cyzone",
+    "precio": 18.0,
+    "precioCatalogo": 29.9,
+    "descripcion": "La crema perfumada de mujer Y25 es perfecta para acompañar tu rutina diaria, con un aroma floral frutal que combina dulces notas de frambuesa, delicados toques de jazmín y un irresistible ámbar. Su alta concentración en formato Eau de Parfum garantiza una fragancia duradera que realza tu esencia única. Con 130 ml de sofisticación, celebra el poder de ser tú en cada aplicación. Registro NSOC35569-24CO.",
+    "image1": "https://media.falabella.com/falabellaPE/149900845_01/w=1200,h=1200,fit=pad",
+    "image2": "https://cyzone.cyzone.com/pe/wp-content/uploads/sites/11/2025/05/DK_Y25_seccion-4-productos_hover-3.jpg",
+    "image3": "https://www.faroshop.co/cdn/shop/files/CremaY25.png?v=1757379548",
+    "image4": null,
+    "video1": "https://www.tiktok.com/@claudiamandujano457/video/7523656064030772488?q=crema%20y25&t=1775336478189",
+    "video2": "https://www.tiktok.com/@only4ulapaz/video/7541147734187707654?q=crema%20y25&t=1775336478189",
+    "video3": "https://www.tiktok.com/@mayraflores316/video/7554573452636605703?q=crema%20y25&t=1775336478189",
+    "video4": "https://www.tiktok.com/@zenaidasontay/video/7539606889420655927?q=crema%20y25&t=1775336478189",
+    "estado": "Público"
+  },
+  {
+    "id": "PER-YA-000065",
+    "categoria": "Perfumes y Cosméticos",
+    "producto": "L'essence Mimosa Radiante Colonia",
+    "marca": "Yanbal",
+    "precio": 30.0,
+    "precioCatalogo": 39.0,
+    "descripcion": "L’Essence Mimosa Radiante es una colonia femenina que envuelve con frescura luminosa de flores amarillas y un aroma suave, dulce y optimista. Inspirada en la delicadeza de la mimosa, transmite una sensación cálida, alegre y ligera que permanece sutilmente durante el día. Ideal para mujeres que disfrutan de fragancias delicadas, naturales y llenas de vitalidad. Perfecta para uso diario, aporta un toque elegante y radiante a cada momento.",
+    "image1": "https://simple.ripley.com.pe/product/_next/image?url=https%3A%2F%2Frimage.ripley.com.pe%2Fhome.ripley%2FAttachment%2FMKP%2F3830%2FPMP20001211615%2Ffull_image-1.jpeg&w=640&q=100",
+    "image2": "https://http2.mlstatic.com/D_NQ_NP_2X_673374-MPE97766140115_112025-F.webp",
+    "image3": null,
+    "image4": null,
+    "video1": "https://www.tiktok.com/@andreaavendano.q/video/7558250930504731911?q=L%27%20ESSENCE%20MIMOSA%20RADIANTE&t=1775337372224",
+    "video2": "https://www.tiktok.com/@viancaromeroyanbal/video/7561436519001574667?q=L%27%20ESSENCE%20MIMOSA%20RADIANTE&t=1775337372224",
+    "video3": "https://www.tiktok.com/@perfumeriaaromasymas/video/7585704833852738824?q=L%27%20ESSENCE%20MIMOSA%20RADIANTE&t=1775337372224",
+    "video4": "https://www.tiktok.com/@mcm_yanbal/video/7552669669765729554?q=L%27%20ESSENCE%20MIMOSA%20RADIANTE&t=1775337372224",
     "estado": "Público"
   }
 ]
