@@ -18,12 +18,12 @@
 
 /* Cursor normal */
 body {
-  cursor: url("Pink_cursor.png"), auto;
+  cursor: url("/Pink_cursor.png"), auto;
 }
 
 /* Cursor tipo "manito" */
 a, button, [role="button"], .clickable {
-  cursor: url("Pink_Pointer.png"), pointer;
+  cursor: url("/Pink_Pointer.png"), pointer;
 }
 
 /* Chrome / Edge / Safari */
