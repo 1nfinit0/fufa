@@ -331,9 +331,9 @@
     "precio": 15.0,
     "precioCatalogo": 84.6,
     "descripcion": "Loción corporal humectante con un bouquet floral sofisticado. Destacan notas de lirio de valle e iris, sobre maderas y especias. Deja la piel suave, llena de vida y prolonga el aroma del perfume. Su fragancia floral se impregna gracias a la perfumación por capas. Un aroma distinguible que complementa y potencia tu perfume favorito.",
-    "image1": "https://belcorpperu.vtexassets.com/arquivos/ids/374751-1600-auto?v=638917648580870000&width=1600&height=auto&aspect=true",
-    "image2": "https://belcorpperu.vtexassets.com/arquivos/ids/374748-1600-auto?v=638917648576170000&width=1600&height=auto&aspect=true",
-    "image3": "https://belcorpperu.vtexassets.com/arquivos/ids/374750-1600-auto?v=638917648579470000&width=1600&height=auto&aspect=true",
+    "image1": "https://media.falabella.com/falabellaPE/144524291_01/w=1200,h=1200,fit=pad",
+    "image2": null,
+    "image3": null,
     "image4": null,
     "video1": "https://www.tiktok.com/@esikalebelcyzone25/video/7464619312326642949?q=crema%20Liasson%20130%20ml%20&t=1770751890901",
     "video2": "https://www.tiktok.com/@naturmaya.pe/video/7281432190309764357?q=crema%20Liasson%20130%20ml%20&t=1770751890901",
@@ -411,7 +411,7 @@
     "video2": "https://www.tiktok.com/@eri_style_b/video/7534183097122802950?q=Cacao.%20Pulpa%20hidratante%20corporal%20400%20ml.%20Natura%20Ekos&t=1771359224186",
     "video3": "https://www.tiktok.com/@arlenedourado/video/7514754784851676422?q=Cacao.%20Pulpa%20hidratante%20corporal%20400%20ml.%20Natura%20Ekos&t=1771359224186",
     "video4": "https://www.tiktok.com/@rosemakeup148/video/7513988717430820152?q=Cacao.%20Pulpa%20hidratante%20corporal%20400%20ml.%20Natura%20Ekos&t=1771359224186",
-    "estado": "Público"
+    "estado": "Privado"
   },
   {
     "id": "CUI-CY-000059",
@@ -555,7 +555,7 @@
     "video2": "https://www.tiktok.com/@amourestore89/video/7602695355699875092?q=Suero%20Ultra%20Hidratante&t=1775704395191",
     "video3": null,
     "video4": null,
-    "estado": "Público"
+    "estado": "Privado"
   },
   {
     "id": "CUI-YA-000069",
@@ -752,6 +752,42 @@
     "video1": "https://www.tiktok.com/@chaparrita06059/video/7517288475524074760?q=Hydra-Lip%20Labial%20L%C3%ADquido%20Mate%20Caramel%20Nude&t=1777831118318",
     "video2": "https://www.tiktok.com/@judithlopo/video/7589438666708176149?q=Hydra-Lip%20Labial%20L%C3%ADquido%20Mate%20Caramel%20Nude&t=1777831118318",
     "video3": "https://www.tiktok.com/@judithlopo/video/7517484951520972050?q=Hydra-Lip%20Labial%20L%C3%ADquido%20Mate%20Caramel%20Nude&t=1777831118318",
+    "video4": null,
+    "estado": "Público"
+  },
+  {
+    "id": "PER-YA-000083",
+    "categoria": "Perfumes y Cosméticos",
+    "producto": "DELINEADOR RETRÁCTIL PARA CEJAS MARRÓN CENIZO",
+    "marca": "Yanbal",
+    "precio": 30.0,
+    "precioCatalogo": 40.5,
+    "descripcion": "¡La combinación perfecta para cejas más definidas, perfiladas y bellas! Con su sistema 3 en 1 con una mina triangular, cepillo y la navaja perfiladora incorporada, lograrás las cejas que deseas. Además de su alta precisión y color intenso, es a prueba de agua y se percibe que es de larga duración.",
+    "image1": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4357/PMP20001143412/imagen3-1.jpeg",
+    "image2": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4357/PMP20001143412/full_image-1.jpeg",
+    "image3": null,
+    "image4": null,
+    "video1": "https://www.tiktok.com/@vaniadirectorape/video/7460323087372832005?q=Delineador%20Retr%C3%A1ctil%20para%20Cejas%20Marr%C3%B3n%20Cenizo.%20Yanbal&t=1785860422831",
+    "video2": "https://www.tiktok.com/@belhidyanbal/video/7538131815580667150?q=Delineador%20Retr%C3%A1ctil%20para%20Cejas%20Marr%C3%B3n%20Cenizo.%20Yanbal&t=1785860422831",
+    "video3": null,
+    "video4": null,
+    "estado": "Público"
+  },
+  {
+    "id": "CUI-YA-000085",
+    "categoria": "Cuidado Personal",
+    "producto": "Desodorante Antitranspirante Roll On Effective Aclarante",
+    "marca": "Yanbal",
+    "precio": 13.0,
+    "precioCatalogo": 14.0,
+    "descripcion": "Un desodorante roll on aclarante, hipoalergénico y clínicamente probado, que te protege contra el mal olor en las axilas y la transpiración, mientras ayuda a restaurar el tono natural de tu piel. No irrita tus axilas y puedes usarlo inmediatamente después de depilarte.",
+    "image1": "https://www.yanbal.com/medias/20011666-01.jpg?context=bWFzdGVyfGltYWdlc3wxODIzMXxpbWFnZS9qcGVnfGFHTTVMMmd5T0M4eE1qTXhOVFl4TVRZNU16QTROaTh5TURBeE1UWTJObDh3TVM1cWNHY3xjMDllMTU5MWI3M2FiYWNiMTc1MDcyMjg1MmFmZWUxMjc3OWY0YTczY2ZiNGVhOTc4MzIyZDE3ZmU4M2YyMDRk",
+    "image2": null,
+    "image3": null,
+    "image4": null,
+    "video1": "https://www.tiktok.com/@la_rakyguzman/video/7604926001331621141?q=Desodorante%20Antitranspirante%20Roll%20On%20Effective%20Aclarante%20yanbal&t=1785860919458",
+    "video2": "https://www.tiktok.com/@lilianamonteiro_o/video/7627233337593154834?q=Desodorante%20Antitranspirante%20Roll%20On%20Effective%20Aclarante%20yanbal&t=1785860963217",
+    "video3": null,
     "video4": null,
     "estado": "Público"
   }
